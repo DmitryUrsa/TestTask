@@ -1,0 +1,221 @@
+/* block */
+/***********************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+
+$fontStack: 'Montserrat', sans-serif;
+
+.modal {
+	font-family: $fontStack;
+	color: #000;
+	max-width: 1163px;
+	width: 100%;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 48px;
+	background-color: #fdfdfd;
+	padding: 106px 83px 126px 91px;
+
+	@include res-less(xl) {
+		text-align: center;
+	}
+
+	@include res-less(sm) {
+		padding: 40px;
+	}
+
+	&__header {
+		font-size: 52px;
+		font-weight: 600;
+		letter-spacing: -0.14px;
+		margin-left: 34px;
+		margin-bottom: 75px;
+
+		@include res-less(lg) {
+			margin-bottom: 50px;
+			font-size: 42px;
+		}
+
+		@include res-less(sm) {
+			font-size: 26px;
+			margin-left: 0;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+
+		@include res-less(lg) {
+			flex-direction: column;
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		margin-right: 119px;
+
+		@include res-less(xl) {
+			margin-right: 80px;
+		}
+
+		@include res-less(lg) {
+			text-align: center;
+			margin-bottom: 60px;
+			margin-right: 0;
+		}
+
+	}
+
+	&__content {
+		.ui-btn {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		color: #727272;
+		font-size: 22px;
+		@include res-less(xl) {
+			font-size: 18px;
+		}
+	}
+}
+
+.ui-input {
+	outline: 0;
+	&--thin {
+		padding: 30px;
+		text-align: center;
+		border-radius: 3em;
+		border: 1px solid #c2c2c2;
+		background-color: #ffffff;
+		font-size: 26px;
+		font-weight: 500;
+		letter-spacing: 2.25px;
+
+		@include res-less(xl) {
+			font-size: 20px;
+		}
+
+		@include res-less(sm) {
+			font-size: 14px;
+			padding: 20px;
+		}
+
+		&::placeholder {
+			color: #9f9f9f;
+		}
+	}
+}
+
+.ui-btn {
+	&--icon {
+		.ico-svg {
+			margin-left: 49px;
+			width: 45px;
+			height: 33px;
+
+			@include res-less(sm) {
+				display: none;
+			}
+		}
+	}
+
+	&--big {
+		.ui-btn__box {
+			width: 100%;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 24px;
+			letter-spacing: 4px;
+
+			@include res-less(xl) {
+				font-size: 18px;
+			}
+
+			@include res-less(sm) {
+				padding: 14px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+	&--theme-secondary {
+		.ui-btn__box {
+			width: 100%;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+	&--skin-geenblue {
+		.ui-btn__box {
+			padding: 30px;
+			border-radius: 3em;
+			background-image: linear-gradient(270deg, #677bbf 0%, #049f77 100%);
+
+			@include res-less(sm) {
+				padding: 20px;
+			}
+
+			&:hover {
+				transform: scale(0.98);
+			}
+
+			&:active {
+				opacity: .9;
+				transform: scale(0.96);
+			}
+		}
+	}
+}
+
+.shop-icon {
+	position: relative;
+	display: inline-block;
+
+	img {
+		@include res-less(lg) {
+			height: 200px;
+			width: auto;
+		}
+
+		@include res-less(sm) {
+			height: 160px;
+			width: auto;
+		}
+	}
+
+	&__circle {
+		width: 113px;
+		height: 113px;
+		border-radius: 100%;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+		background-color: #fdfdfd;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 2; 
+		bottom: -56.5px;
+		right: -23px;
+
+
+		@include res-less(sm) {
+			height: 70px;
+			width: 70px;
+			bottom: -35px;
+			right: -18px;
+		}
+
+		.ico-svg {
+			width: 56px;
+			height: 53px;
+
+			@include res-less(sm) {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+}
