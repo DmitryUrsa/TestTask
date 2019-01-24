@@ -158,11 +158,15 @@ $fontStack: 'Montserrat', sans-serif;
 				padding: 20px;
 			}
 
-			&:hover {
+		}
+		&:hover {
+			.ui-btn__box {
 				transform: scale(0.98);
 			}
+		}
 
-			&:active {
+		&:active {
+			.ui-btn__box {
 				opacity: .9;
 				transform: scale(0.96);
 			}
